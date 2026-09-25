@@ -1,0 +1,14 @@
+\begin{tabular}{llccccc}
+\toprule
+Dataset & Architecture & seeds & $\alpha_{\mathrm{PTQ}}$ & $\alpha_{\mathrm{QAT}}$ & $\alpha_{\mathrm{QAT}}/\alpha_{\mathrm{PTQ}}$ & $\Delta\alpha$ \\
+\midrule
+Fashion-MNIST & MLP plain & 10 & $0.70\pm0.07$ & $1.02\pm0.11$ & $1.47$ {\scriptsize[1.37, 1.57]} & $+0.33$ {\scriptsize[+0.27, +0.37]} \\
+MNIST & MLP plain & 10 & $0.73\pm0.08$ & $1.06\pm0.15$ & $1.45$ {\scriptsize[1.37, 1.54]} & $+0.33$ {\scriptsize[+0.29, +0.37]} \\
+Fashion-MNIST & MLP res. $s=1/\sqrt{8}$ & 10 & $0.32\pm0.17$ & $0.51\pm0.39$ & $1.58$ {\scriptsize[1.39, 1.83]} & $+0.19$ {\scriptsize[+0.14, +0.23]} \\
+MNIST & MLP res. $s=1/\sqrt{8}$ & 10 & $0.28\pm0.12$ & $0.51\pm0.40$ & $1.86$ {\scriptsize[1.62, 2.17]} & $+0.24$ {\scriptsize[+0.20, +0.28]} \\
+Fashion-MNIST & MLP res. $s=1/\sqrt{D}$ & 10 & $-0.04\pm0.05$ & $0.03\pm0.02$ & n/a & $+0.06$ {\scriptsize[+0.04, +0.09]} \\
+CIFAR-10 & CNN res. $s=1$ (15 epochs)$^\dagger$ & 3 & $0.04$ & $0.38$ & n/a & $+0.33$ \\
+CIFAR-10 & CNN res. $s=1$ (30 epochs)$^\dagger$ & 2 & $0.01$ & $0.15$ & n/a & $+0.14$ \\
+CIFAR-10 & ViT pre-LN & 3 & $-0.09\pm0.02$ & $0.00\pm0.04$ & n/a & $+0.09$ {\scriptsize[+0.07, +0.10]} \\
+\bottomrule
+\end{tabular}
