@@ -24,8 +24,12 @@ Python 3.10 or later.
 pip install -r requirements.txt
 ```
 
-The MLP experiments run on a CPU. The CNN, ViT and language-model experiments need a CUDA GPU
-(we used one RTX A4000, 16 GB).
+The MLP experiments run on a CPU. The CNN, ViT and language-model experiments need a CUDA GPU.
+
+The results in `results/` were produced on one server: 2 × Intel Xeon Gold 6426Y (32 cores), 128 GB RAM,
+NVIDIA RTX A4000 (16 GB), Windows Server 2022, Python 3.12, NumPy 2.4, PyTorch 2.5 (CUDA 12.1). Approximate
+run times on this machine: full MLP grid 1.7 hours (56 parallel processes); measuring all CNN/ViT checkpoints
+and the language models 3.5 GPU-hours; ViT noise-aware training 10 GPU-hours.
 
 ## Data
 
